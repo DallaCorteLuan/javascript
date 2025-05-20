@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Que País você é?</title>
+
+</head>
+<body>
+    <h1> De qual país voce é ?</h1>
+    <p>Sou do <input type="text" name="txtp" id="txtp"></p>
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        let txtp = document.getElementById('txtp')
+        let res = document.getElementById('res')
+
+        function calcular() {
+        if (txtp.value == 'Brasil') {
+            res.innerHTML = `<p>Parabéns Você Mora num lixo de País, sujiro que vá para outro país, obrigado!!!!</p>`
+        } else {
+            res.innerHTML = `<p>Voce mora em <strong>${txtp.value}</strong></p>`
+        }
+        }
+    </script>
+</body>
+</html>
